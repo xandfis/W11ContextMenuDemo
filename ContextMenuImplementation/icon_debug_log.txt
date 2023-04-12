@@ -1,0 +1,1 @@
+Icon loaded successfully: C:\src\AppModelSamples-master\Samples\SparsePackages\ContextMenuImplementation\bin\x64\Debug\Notepad.ico
