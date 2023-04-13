@@ -7,7 +7,7 @@ You can learn more about the Windows 11 context menu on my [post](https://blogs.
 
 ## Instructions
 
-TODO - I'm planning to make a tutorial video and other utilities to help here. Stay tuned.
+https://www.youtube.com/watch?v=MedIpcS4Hcg
 
 
 ## Reference Commands
