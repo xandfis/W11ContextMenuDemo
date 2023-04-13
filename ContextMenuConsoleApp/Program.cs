@@ -8,6 +8,9 @@ namespace ContextMenuConsoleApp
         static void Main(string[] args)
         {
             StartUp.Main(args);
+
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
         }
     }
 }

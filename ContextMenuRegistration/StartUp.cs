@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Threading;
-using System.Diagnostics;
 using Windows.Management.Deployment;
-using System.Windows;
 using System.Runtime.InteropServices;
+using System.IO;
 
 
 namespace ContextMenuRegistration
@@ -19,14 +18,18 @@ namespace ContextMenuRegistration
                 //TODO - update the value of externalLocation to match the output location of your VS Build binaries and the value of 
                 //sparsePkgPath to match the path to your signed Sparse Package (.msix). 
                 //Note that these values cannot be relative paths and must be complete paths
-                string externalLocation = @"C:\src\AppModelSamples-master\Samples\SparsePackages\ContextMenuImplementation\bin\x64\Release";
-                string sparsePkgPath = @"C:\src\mypackage.msix";
+                //string externalLocation = @"C:\src\AppModelSamples-master\Samples\SparsePackages\ContextMenuImplementation\bin\x64\Release";
+                //string sparsePkgPath = @"C:\src\mypackage.msix";
+
+                string exePath = AppDomain.CurrentDomain.BaseDirectory;
+                string externalLocation = Path.Combine(exePath, @"");
+                string sparsePkgPath = Path.Combine(exePath, @"mypackage.msix");
 
                 //Attempt registration
                 if (registerSparsePackage(externalLocation, sparsePkgPath))
                 {
                     //Registration succeded, restart the app to run with identity
-                    Console.WriteLine("Package Registration succeded, restart the app to run with identity");
+                    Console.WriteLine("Package Registration succeded!");
                 }
                 else //Registration failed, run without identity
                 {

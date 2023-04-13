@@ -151,7 +151,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)ContextMenuImplementation\bin\$(Platform)\$(Configuration)</OutDir>
+    <OutDir>$(SolutionDir)\ContextMenuConsoleApp\bin\$(Configuration)\netcoreapp3.1</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <LinkIncremental>false</LinkIncremental>
