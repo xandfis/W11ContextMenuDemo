@@ -7,8 +7,8 @@ You can learn more about the Windows 11 context menu on my [post](https://blogs.
 
 ## Instructions
 
-https://www.youtube.com/watch?v=LfBQm-FY-2I
-https://www.reddit.com/r/Windows11/comments/12mfjca/how_to_write_your_own_windows_11_context_menu/
+* [YouTube tutorial](https://www.youtube.com/watch?v=LfBQm-FY-2I)
+* [Reddit post](https://www.reddit.com/r/Windows11/comments/12mfjca/how_to_write_your_own_windows_11_context_menu/)
 
 ## Reference Commands
 
