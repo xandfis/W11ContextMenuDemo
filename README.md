@@ -32,3 +32,22 @@ In a CMD window:
 ```
 "C:\Program Files (x86)\Windows Kits\10\bin\10.0.22000.0\x64\signtool.exe" sign /fd SHA256 /a /f "C:\src\MyPFX.pfx" /p <YOUR PASSWORD> "C:\src\mypackage.msix"
 ```
+## Unregistering App Packages
+1. Open PowerShell as administrator.
+
+2. Run the following command to change the execution policy for the current session to "Unrestricted"
+    ```powershell
+    Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process
+    ```
+
+3. Get the list of installed context menus by running the script in the root of the repository
+    ```powershell
+    .\FindAppsWithFileExplorerContextMenus.ps1
+    ```
+
+4. Take note of the `PackageFullName` for the app package you wish to unregister.
+
+5. Next, unregister the app package using the following command, replacing `<PackageFullName>` with the actual package's full name:
+    ```powershell
+    Get-AppxPackage -Name <PackageFullName> | Remove-AppxPackage
+    ```
