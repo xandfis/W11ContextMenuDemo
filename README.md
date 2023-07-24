@@ -32,7 +32,7 @@ In a CMD window:
 ```
 "C:\Program Files (x86)\Windows Kits\10\bin\10.0.22000.0\x64\signtool.exe" sign /fd SHA256 /a /f "C:\src\MyPFX.pfx" /p <YOUR PASSWORD> "C:\src\mypackage.msix"
 ```
-## Unregistering App Packages
+## Unregistering Context Menus (App Packages)
 1. Open PowerShell as administrator.
 
 2. Run the following command to change the execution policy for the current session to "Unrestricted"
