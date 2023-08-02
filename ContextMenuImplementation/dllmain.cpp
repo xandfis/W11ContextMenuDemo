@@ -5,9 +5,8 @@
 #include <shobjidl_core.h>
 #include <wil/resource.h>
 #include <Shellapi.h>
-#include <Shlwapi.h>
 #include <Strsafe.h>
-
+#include <pathcch.h>
 
 using namespace Microsoft::WRL;
 
@@ -65,7 +64,7 @@ public:
                 WCHAR modulePath[MAX_PATH];
                 if (GetModuleFileNameW(g_hModule, modulePath, ARRAYSIZE(modulePath)))
                 {
-                    PathRemoveFileSpecW(modulePath);
+                    PathCchRemoveFileSpec(modulePath, ARRAYSIZE(modulePath));
                     StringCchCatW(modulePath, ARRAYSIZE(modulePath), L"\\Notepad.ico");
 
                     auto iconPathStr = wil::make_cotaskmem_string_nothrow(modulePath);
