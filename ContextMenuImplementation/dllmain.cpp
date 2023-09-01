@@ -116,8 +116,12 @@ public:
     IFACEMETHODIMP GetCanonicalName(_Out_ GUID* guidCommandName) { *guidCommandName = GUID_NULL;  return S_OK; }
     IFACEMETHODIMP GetState(_In_opt_ IShellItemArray* selection, _In_ BOOL okToBeSlow, _Out_ EXPCMDSTATE* cmdState)
     {
-        *cmdState = ECS_ENABLED;
-        return S_OK;
+        if (selection && okToBeSlow)
+            {
+                *cmdState = ECS_ENABLED;
+                return S_OK;
+            }
+            *cmdState = ECS_HIDDEN; 
     }
 
     IFACEMETHODIMP Invoke(_In_opt_ IShellItemArray* selection, _In_opt_ IBindCtx*) noexcept try
