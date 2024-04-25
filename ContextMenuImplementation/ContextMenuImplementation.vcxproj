@@ -247,7 +247,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
       <ModuleDefinitionFile>Source.def</ModuleDefinitionFile>
-      <AdditionalDependencies>runtimeobject.lib;%(AdditionalDependencies);Shlwapi.lib</AdditionalDependencies>
+      <AdditionalDependencies>runtimeobject.lib;%(AdditionalDependencies);Shlwapi.lib;pathcch.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
